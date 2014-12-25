@@ -1,0 +1,25 @@
+@charset "utf-8";
+// ===================================================================
+// 各SCSSファイルのインポート
+// ===================================================================
+
+// 設定用
+@import "setting";
+
+// リセットCSS、フォントサイズ
+@import "reset";
+
+body{
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", verdana, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+	-webkit-text-size-adjust: none;
+
+	a{
+		text-decoration: none;
+		color: #323232;
+	}
+}
+
+
+
+
+

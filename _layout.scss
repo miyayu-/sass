@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+// ミックスイン
+@import "mixin";
+
+// ===================================================================
+// 共通要素
+// ===================================================================
+body{
+	background: #000;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", verdana, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+}
+
+.wrap{
+	width: 100%;
+	padding: 2%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+// ===================================================================
+// サイド
+// ===================================================================
+.side{
+	position: fixed;
+	float: left;
+	width: 22%;
+
+	@include e(tit) {
+		margin-bottom: 20px;
+		padding: 15px 10px;
+		border: 1px solid #ccc;
+		line-height: 1;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	@include e(item) {
+		position: relative;
+		margin: 0 0 15px 18px;
+		font-size: 14px;
+
+		&:before{
+			content:'・';
+			position: absolute;
+			top: 2px;
+			left: -20px;
+			color: #ccc;
+		}
+
+		a{
+			display: inline-block;
+			padding: 2px;
+			background: #ccc;
+			transition: .15s ease-in;
+
+			&:hover{
+				background: #000;
+				color: #fff;
+			}
+		}
+	}
+
+}
+
+
+
+// ===================================================================
+// メイン
+// ===================================================================
+.main{
+	float: right;
+	width: 75%;
+}
+h1{
+	margin: 80px 0 10px;
+	padding: 15px;
+	border: 1px solid #fff;
+	line-height: 1;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+
+	&:first-child{
+		margin: 0 0 10px;
+	}
+}
+h2{
+	margin-bottom: 10px;
+	padding: 15px;
+	border: 1px solid #fff;
+	line-height: 1;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.content{
+	p{
+		font-size: 14px;
+		color: #fff;
+	}
+}
+.exampleOutput{
+	margin: 20px 0;
+	padding: 15px;
+	background: #fff;
+}
+.codeBlock{
+	padding: 15px;
+	border: 1px solid #fff;
+
+	pre{
+		overflow: auto;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		color: #fff;
+	}
+
+	span{
+		line-height: 1.4;
+		font-size: 14px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	.nt{
+		color: #f35656;
+	}
+	.na{
+		color: #5de995;
+	}
+	.s{
+		color: #f0da5e;
+	}
+}
+
+.btn{
+	width: 180px;
+	margin: 0 auto;
+	border: 1px solid #000;
+	background: #fff;
+	text-align: center;
+    box-sizing: border-box;
+
+	a{
+		display: block;
+		padding: 15px 25px;
+		transition: .15s ease-in;
+
+		&:hover{
+			background: #ccc;
+		}
+	}
+}
